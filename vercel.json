@@ -9,21 +9,14 @@
         }
       }
     ],
-    
-      "headers": [
-        {
-          "source": "/styles-*.css",
-          "headers": [{ "key": "Content-Type", "value": "text/css" }]
-        }
-      ],
-        "cleanUrls": true,
-  "trailingSlash": false
-    ,
     "routes": [
       {
         "src": "/(.*)",
         "dest": "/index.html"
-      }
+      },
+      { "handle": "filesystem" },
+      { "src": "/assets/(.*)", "dest": "/assets/$1" },
+      { "src": "/(.*)", "dest": "/index.html" }
     ]
   }
   
