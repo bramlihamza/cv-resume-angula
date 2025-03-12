@@ -1,0 +1,156 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+body {
+  background-color: #ffffff;
+}
+
+app-root{
+  
+  display: rel;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  
+}
+  /* Style du bouton */
+  .bouton-flottant {
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    animation: pulse 1.5s infinite; /* Animation continue */
+}
+
+.bouton-flottant:hover {
+    background-color: #0056b3;
+}
+
+/* Animation de pulsation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+}
+
+
+.bouton-flottant:hover {
+  background-color: #0056b3;
+}
+
+/* Animation de pulsation */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); }
+  50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(0, 123, 255, 0.7); }
+  100% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); }
+}
+        /* Style du bouton flottant */
+        .bouton-flottant {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 15px 20px;
+          cursor: pointer;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+          font-size: 16px;
+          animation: pulse 1.5s infinite;
+          z-index: 10;
+      }
+
+      .bouton-flottant:hover {
+          background-color: #0056b3;
+      }
+
+           /* Conteneur de la vague */
+           .wave-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw; /* Couvre toute la largeur */
+            height: 180px; /* Légère augmentation de la hauteur */
+            overflow: hidden;
+            z-index: 0;
+        }
+
+    /* Conteneur de la vague */
+    .wave-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw; /* Couvre toute la largeur */
+      height: 180px; /* Hauteur par défaut pour les grands écrans */
+      overflow: hidden;
+      z-index: 0;
+  }
+
+  /* SVG de la vague */
+  .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+  }
+
+  /* Première vague */
+  .wave path:nth-child(1) {
+      animation: waveMove 8s infinite linear;
+      opacity: 0.7;
+      fill: #1a237e;
+  }
+
+  /* Deuxième vague (en arrière-plan) */
+  .wave path:nth-child(2) {
+      animation: waveMove 8s infinite linear reverse;
+      opacity: 0.5;
+      fill: #757ae9
+  }
+
+  /* Animation fluide */
+  @keyframes waveMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+  }
+
+  /* Responsive : réduire la vague sur mobile */
+  @media (max-width: 1024px) {
+      .wave-container {
+          height: 120px; /* Hauteur réduite sur tablette */
+      }
+  }
+
+  @media (max-width: 768px) {
+      .wave-container {
+          height: 90px; /* Hauteur plus petite sur mobile */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .wave-container {
+          height: 70px; /* Encore plus petit sur petits mobiles */
+      }
+  }

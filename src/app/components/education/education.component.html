@@ -1,0 +1,18 @@
+<!-- education.component.html -->
+<div class="education-container">
+    <h2 class="section-title">Formation</h2>
+    <div class="timeline">
+      <div class="education-item" *ngFor="let edu of educations">
+        <div class="timeline-marker"></div>
+        <div class="education-content">
+          <h3 class="institution-name">{{ edu.institution }} : {{ edu.degree }}</h3>
+          <div class="period">{{ edu.period }}</div>
+          
+          <ul class="details-list" *ngIf="edu.details && edu.details.length > 0">
+            <li *ngFor="let detail of edu.details">{{ detail }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

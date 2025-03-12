@@ -1,0 +1,41 @@
+{
+  "menu": [
+    {
+      "title": "About me",
+      "icon": "bi bi-person",
+      "route": "/about"
+    },
+    {
+      "title": "Experience",
+      "icon": "bi bi-briefcase",
+      "route": "/experience"
+    },
+    {
+      "title": "Education",
+      "icon": "bi bi-book",
+      "route": "/education"
+    },
+    {
+      "title": "Technical Skills",
+      "icon": "bi bi-code-square",
+      "route": "/skills"
+    }
+  ],
+  "socialLinks": [
+    {
+      "icon": "bi bi-linkedin",
+      "url": "https://www.linkedin.com/in/hamza-bramli",
+      "title": "LinkedIn"
+    },
+    {
+      "icon": "bi bi-github",
+      "url": "https://github.com/hamza-bramli/",
+      "title": "GitHub"
+    },
+    {
+      "icon": "bi bi-envelope",
+      "url": "mailto:bramli.hamza9@gmail.com",
+      "title": "Email"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<!-- profile.component.html -->
+<div class="profile-container">
+  <h2 class="section-title">About ME</h2>
+  
+  <div class="profile-content">
+    <div class="profile-header">
+      <div class="profile-main-info">
+        <h1 class="profile-name">{{ profile.name }}</h1>
+        <h3 class="profile-title">{{ profile.title }}</h3>
+      </div>
+      <div class="profile-contact">
+        <div class="contact-item">
+          <i class="bi bi-envelope "></i> {{ profile.contact?.email }}
+        </div>
+        <div class="contact-item">
+          <i class="bi bi-whatsapp"></i> {{ profile.contact?.phone }}
+        </div>
+        <div class="contact-item">
+          <i class="bi bi-geo-alt"></i> {{ profile.contact?.location }}
+        </div>
+        <div class="contact-item">
+          <i class="bi bi-linkedin "></i> <a href="https://www.linkedin.com/in/hamza-bramli/"> {{ profile.contact?.linkedin }} </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="profile-summary">
+      <p>{{ profile.summary }}</p>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+
+<div class="profile-container">
+  <h2 class="section-title">Languages</h2>
+  
+  <div class="profile-content">
+    <div class="profile-header">
+     
+   Francais : Bilingue
+<br>
+   Anglais : Professionnel
+   
+  </div>
+</div>

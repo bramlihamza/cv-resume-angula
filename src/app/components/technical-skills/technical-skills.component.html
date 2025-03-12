@@ -1,0 +1,16 @@
+<!-- skills.component.html -->
+<div class="skills-container">
+    <h2 class="section-title">Compétences Techniques</h2>
+    <div class="timeline">
+      <div class="skill-category-item" *ngFor="let category of skillCategories">
+        <div class="timeline-marker"></div>
+        <div class="skill-content">
+          <h3 class="category-name">{{ category.category }}</h3>
+          <ul class="skills-list">
+            <li *ngFor="let skill of category.skills">{{ skill }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

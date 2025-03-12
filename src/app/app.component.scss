@@ -1,0 +1,68 @@
+.sidebar {
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
+
+     /* Couleur grise claire */
+
+  }
+ 
+  .content-area {
+    padding: 0;
+    margin-left: 0 !important;
+    transition: all 0.3s;
+    margin-bottom: 6%;
+    
+  }
+  
+  @media (max-width: 767.98px) {
+    
+    
+
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 80%;
+      height: 100%;
+
+    }
+  }
+
+
+
+/* Vous pouvez ajouter ces styles à votre fichier styles.scss */
+
+.sidebar {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateX(5px);
+  }
+}
+
+.social-links a {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.content-container {
+  padding: 20px;
+  min-height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
