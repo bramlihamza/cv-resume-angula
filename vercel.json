@@ -15,7 +15,9 @@
           "source": "/styles-*.css",
           "headers": [{ "key": "Content-Type", "value": "text/css" }]
         }
-      ]
+      ],
+        "cleanUrls": true,
+  "trailingSlash": false
     ,
     "routes": [
       {
