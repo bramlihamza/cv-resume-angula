@@ -8,6 +8,9 @@
           "distDir": "dist/hamza-resume/browser"
         }
       }
+    ],
+    "rewrites": [
+        {"source": "/(.*)", "destination": "/"}
     ]
    
   }
