@@ -31,8 +31,8 @@ export class AboutComponent implements OnInit {
         this.seoService.updateMetaTags({
           title: `${this.profile.name} - ${this.profile.title}`,
           description: this.profile.about,
-          image: 'https://hamza.bramli.dev/assets/images/profile.jpg',
-          url: 'https://hamza.bramli.dev.app/profile',
+          image: 'https://hamza.bramli.dev/assets/images/profil.jpg',
+          url: 'https://hamza.bramli.dev.app/about',
           keywords: `${this.profile.name}, développeur, ${this.profile.title}, cv, portfolio,devops`
         });
 
