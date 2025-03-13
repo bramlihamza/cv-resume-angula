@@ -7,7 +7,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { TechnicalSkillsComponent } from './components/technical-skills/technical-skills.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule, Routes } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Meta, Title } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routes';
 import { HttpClientModule } from '@angular/common/http'; // Vérifiez cette importation
 
@@ -38,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http'; // Vérifiez cette impo
     AppRoutingModule, // Add the routing module here
     RouterModule
   ],
-  providers: [],
+  providers: [ Meta,
+    Title ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
