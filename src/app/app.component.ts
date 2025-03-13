@@ -14,7 +14,6 @@ import { trigger, transition, style, animate, query, group } from '@angular/anim
   animations: [
     trigger('routeAnimations', [
       transition('* <=> *', [
-        // Ici on définit un effet de transition entre les pages
         style({ position: 'relative' }),
         query(':enter, :leave', [
           style({

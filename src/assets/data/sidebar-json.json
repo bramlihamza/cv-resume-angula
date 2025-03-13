@@ -3,22 +3,26 @@
     {
       "title": "About me",
       "icon": "bi bi-person",
-      "route": "/about"
+      "route": "/about",
+      "internal": true
     },
     {
       "title": "Experience",
       "icon": "bi bi-briefcase",
-      "route": "/experience"
+      "route": "/experience",
+      "internal": true
     },
     {
       "title": "Education",
       "icon": "bi bi-book",
-      "route": "/education"
+      "route": "/education",
+      "internal": true
     },
     {
       "title": "Technical Skills",
       "icon": "bi bi-code-square",
-      "route": "/skills"
+      "route": "/skills",
+      "internal": true
     }
   ],
   "socialLinks": [

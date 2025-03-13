@@ -51,13 +51,27 @@
     <i class="{{item.icon}}"></i> {{item.title}}
   </a>
 
-  <a [href]="'https://blog.bramli.dev'" target="_blank"  class="nav-link" >
- <i class="bi bi-code-square">blog</i> 
-</a>
-
-
 
 </div>
+
+
+<div class="nav flex-column nav-pills">
+
+
+  <a class="nav-link" 
+    [href]="'https://blog.bramli.dev'" 
+    target="_blank" 
+     [@menuItemAnimation] 
+     
+      >
+    <i class="bi bi-pencil-square"> &nbsp; blog</i> 
+   </a>
+
+</div>
+
+
+
+
 <div class="social-links mt-4 text-center">
   <a *ngFor="let link of socialLinks; let i = index"
      [href]="link.url" 
