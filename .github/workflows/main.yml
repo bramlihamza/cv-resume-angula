@@ -1,0 +1,49 @@
+name: Deploy CV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-to-vercel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      - name: Wait for deployment
+        run: sleep 30
+
+      - name: Check deployment status
+        run: |
+          URL="https://your-vercel-url.vercel.app"
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" $URL)
+          if [ "$STATUS" -ne 200 ]; then
+            echo "Deployment failed!"
+            exit 1
+          fi
+
+  deploy-to-hosting:
+    needs: deploy-to-vercel
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload files via SFTP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
+          port: 22
+          source: "/dist/browser/*"
+          target: " /home/devoqlpr/hamza.bramli.dev"
